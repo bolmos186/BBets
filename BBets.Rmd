@@ -76,6 +76,68 @@ The expected amount of money is `r mean(results)`
 
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
 
+# 95% confidence interval
+
+```{r}
+results=vector("numeric")
+for(j in 1:1000){
+bank=0
+for(i in 1:637){
+  class=sample(daysYEAR,35,replace = TRUE)
+  n=length(unique(class))
+  if(n == 35)bank=bank-2
+  else bank=bank+1
+}
+results[j]=bank
+}
+sortRESULTS=sort(results)
+lcl=sortRESULTS[25]
+ucl=sortRESULTS[975]
+
+```
+
+lower confidence limit= `r lcl`  
+upper confidence limit= `r ucl`  
+
+#Fair odd pay off
+
+```{r}
+results=vector("numeric")
+for(j in 1:1000){
+bank=0
+for(i in 1:637){
+  class=sample(daysYEAR,35,replace = TRUE)
+  n=length(unique(class))
+  if(n == 35)bank=bank-4
+  else bank=bank+1
+}
+results[j]=bank
+}
+hist(results)
+```
+
+
+The amount that Dr. J would have to make this a fair bet is 
+
+
+# Number of students for a fair bet
+
+  
+```{r}
+results=vector("numeric")
+for(j in 1:1000){
+bank=0
+for(i in 1:637){
+  class=sample(daysYEAR,15,replace = TRUE)
+  n=length(unique(class))
+  if(n == 15)bank=bank-2
+  else bank=bank+1
+}
+results[j]=bank
+}
+hist(results)
+```
+
 
 # Discussion and Conclusion
 
