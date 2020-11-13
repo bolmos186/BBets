@@ -66,15 +66,18 @@ hist(results)
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
+We have been using a histogram to determine the 95% confidence interval we changed the amount of money and the number of students to find the fairest bet.
+
 ```{r}
 favstats(results)
 ```
-
-The expected amount of money is `r mean(results)`
+ `r mean(results)`
 
 # Confidence interval of Brownlows earning
 
 <!--Explain and display your method of coming up with a 95% confidence interval of  professor Brownlows winnings (or losings)-->
+
+
 
 # 95% confidence interval
 
@@ -117,7 +120,7 @@ hist(results)
 ```
 
 
-The amount that Dr. J would have to make this a fair bet is 
+The amount that Dr. J would have to make this a fair bet is $4.
 
 
 # Number of students for a fair bet
@@ -128,9 +131,9 @@ results=vector("numeric")
 for(j in 1:1000){
 bank=0
 for(i in 1:637){
-  class=sample(daysYEAR,15,replace = TRUE)
+  class=sample(daysYEAR,29,replace = TRUE)
   n=length(unique(class))
-  if(n == 15)bank=bank-2
+  if(n == 29)bank=bank-2
   else bank=bank+1
 }
 results[j]=bank
@@ -143,3 +146,4 @@ hist(results)
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
+We have determined that for there to be a fair bet there has to be 29 students in the class and each student is betting $4. There are many different options however this seems to be the closest. 
