@@ -1,6 +1,6 @@
 ---
 title: "Brownlows Bets"
-author: "Your Name"
+author: "Bethanee Olmos"
 date: "Year 2020"
 output: 
   html_document:
@@ -11,7 +11,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
-require(tidyverse)
+require(tigerstats)
 require(knitr)
 ```
 ### `r as.character(Sys.Date())`
